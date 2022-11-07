@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>cursos</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item *ngFor= "let aux of cursos" [routerLink]="['/cursos',aux.id]">
+    <ion-label>{{ aux.nombreclase }}-{{ aux.seccion }}</ion-label>
+  </ion-item>
+</ion-content>
+  <!--inicio footer-->
+  <ion-footer> 
+    <ion-toolbar>
+      <div class="form-group">
+        <button class="btng btng2" [routerLink]="['/inicio-docente']" ><ion-icon name="home-outline" ></ion-icon></button>
+    
+        <button class="btng btng2" [routerLink]="['/perfil']"><ion-icon name="person-outline"></ion-icon></button>
+        
+        <button class="btng btng2apretado" [routerLink]="['/cursos']"><ion-icon name="book-outline"></ion-icon></button>
+      </div>
+    </ion-toolbar>
+  </ion-footer>
+  <!--fin del footer-->
+  

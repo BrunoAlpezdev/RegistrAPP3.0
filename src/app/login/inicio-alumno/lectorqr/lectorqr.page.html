@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title> scanner</ion-title>
+    <ion-bottons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-bottons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <img src="./assets/scaner.png" />
+    <ion-card-subtitle>Disponible durante 90 minutos </ion-card-subtitle>
+    <qrcode [qrdata]="qrCodeString" [width]="256" [errorCorrectionLevel]="'M'"></qrcode>
+
+  </ion-card>
+</ion-content>
+<!--inicio footer-->
+<ion-footer> 
+  <ion-toolbar>
+    <div class="form-group">
+      <button class="btng btng2" [routerLink]="['/inicio-alumno']" ><ion-icon name="home-outline" ></ion-icon></button>
+  
+      <button class="btng btng2" [routerLink]="['/perfil-alumno']"><ion-icon name="person-outline"></ion-icon></button>
+      
+      <button class="btng btng2apretado" [routerLink]="['/lectorqr']"><ion-icon name="scan-outline"></ion-icon></button>
+    </div>
+  </ion-toolbar>
+</ion-footer>
+<!--fin del footer-->

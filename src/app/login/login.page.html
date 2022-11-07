@@ -1,0 +1,53 @@
+<ion-content>
+  <img src="https://live.staticflickr.com/8454/8052574696_2106b56753_b.jpg" alt="">
+  <div id="container" >
+    <ion-card class="carta">
+      
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_DuocUC.svg/2560px-Logo_DuocUC.svg.png" />
+
+      <ion-card-content>
+        Inicio de sesión
+        <ion-item>
+          <ion-label position="floating">Usuario: </ion-label>
+          <ion-input placeholder="alumno@duocuc.cl" type="text" #txtUsuario></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Contraseña: </ion-label>
+          <ion-input placeholder="contraseña" type="password" #txtPass></ion-input>
+        </ion-item>
+
+
+        
+      </ion-card-content>
+      <div class="form-group">
+        <button class="btng btng2" (click)="login(txtUsuario,txtPass)">Iniciar sesión</button>
+      </div>
+      <div class="form-group">
+        <button class="btng btng2" [routerLink]="['/login/registro']">Registrar</button>
+      </div>
+      <div class="form-group" style="margin-top: 10px ;">
+        <button class="btng btn-google" (click)="onGoogleLogin()">
+          <div class="icono">
+            <ion-icon name="logo-google"></ion-icon>
+          </div>
+          <span>
+            Google
+          </span>
+        </button>
+        <button class="btng btn-gh" (click)="onGitHubLogin()">
+          <div class="icono">
+            <ion-icon name="logo-github"></ion-icon> 
+          </div>
+          <span>
+            GitHub
+          </span>
+        </button>
+      </div>
+      {{ mensaje }}
+      <br>
+      <!--Mantener sesión-->
+      <i-label class="olv" [routerLink]="['/login/resetpass']" >¿Olvidaste tu contraseña?</i-label>
+    </ion-card>
+  </div>
+</ion-content>
+

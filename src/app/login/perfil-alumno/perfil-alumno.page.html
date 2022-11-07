@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="carta">
+    <img aling="center" src="{{ foto }}" />
+    <ion-label>{{ nombre }}
+      {{ correo }}</ion-label>
+    <hr>
+    <div class="form-group">
+      <button class="btng btn-google" (click)="mensajeLogout()">Cerrar Sesión</button>
+      <button class="btng btng2" [routerLink]="['/strapip']" style="margin-top: 5px;"><ion-icon name="apps-outline"></ion-icon>API</button> 
+    </div>
+  </div>
+</ion-content>
+
+<!--inicio footer-->
+<ion-footer> 
+  <ion-toolbar>
+    <div class="form-group">
+      <button class="btng btng2" [routerLink]="['/inicio-alumno']" ><ion-icon name="home-outline" ></ion-icon></button>
+  
+      <button class="btng btng2apretado" [routerLink]="['/perfil-alumno']"><ion-icon name="person-outline"></ion-icon></button>
+      
+      <button class="btng btng2" [routerLink]="['/lectorqr']"><ion-icon name="scan-outline"></ion-icon></button>
+    </div>
+  </ion-toolbar>
+</ion-footer>
+<!--fin del footer-->

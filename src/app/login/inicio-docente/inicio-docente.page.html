@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-item lines="none">
+      <ion-label style="font-weight:800 ;font-size: 3em;" >
+        HORARIO
+        <p style="font-weight: 400;color : blue"> {{ hoy | date:'fullDate' }}</p>
+        <p>
+          Bienvenido {{ usuariolog }} !!
+        </p>
+      </ion-label>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card *ngFor="let aux of todolist" class="ion-margin">
+   <ion-card-header>
+     <ion-item>
+       <ion-icon name="book-outline"></ion-icon> <ion-label>{{ aux.nombreclase }}-{{ aux.seccion }}</ion-label>
+     </ion-item>
+   </ion-card-header>
+ 
+   <ion-card-content>
+     <ion-label>
+       <ion-icon name="time-outline"></ion-icon> Hora de Clase: {{ aux.hora }}
+     </ion-label>
+   </ion-card-content>
+  </ion-card>
+ </ion-content>
+
+<!--inicio footer-->
+<ion-footer> 
+  <ion-toolbar>
+    <div class="form-group">
+      <button class="btng btng2apretado" [routerLink]="['/inicio-docente']" ><ion-icon name="home-outline" ></ion-icon></button>
+  
+      <button class="btng btng2" [routerLink]="['/perfil']"><ion-icon name="person-outline"></ion-icon></button>
+      
+      <button class="btng btng2" [routerLink]="['/cursos']"><ion-icon name="book-outline"></ion-icon></button>
+    </div>
+  </ion-toolbar>
+</ion-footer>
+<!--fin del footer-->

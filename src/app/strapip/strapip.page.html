@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>API</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-card *ngFor="let aux of personaje.data">
+    
+    <ion-card-header>
+      <ion-card-title class="titulo2">
+        {{ aux.attributes.Nombre }}
+      </ion-card-title>
+      <br>
+    </ion-card-header>
+      <!--https://radiant-crag-33232.herokuapp.com/api/personajes?populate=imagen-->
+
+    <img [src]="'https://radiant-crag-33232.herokuapp.com'+aux.attributes.imagen.data.attributes.formats.medium.url">
+    <ion-card-subtitle>Descripcion: {{ aux.attributes.Descripcion }}</ion-card-subtitle>
+    <ion-card-subtitle>Poder: {{ aux.attributes.Poder }}</ion-card-subtitle>
+    <ion-card-content>
+      <ion-button (click)="eliminar(aux.id)">Eliminar</ion-button> 
+    </ion-card-content>
+  </ion-card>
+</ion-content>

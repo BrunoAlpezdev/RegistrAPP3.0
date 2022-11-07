@@ -1,0 +1,43 @@
+.carta {
+    padding: 20px;
+}
+
+.lbl{
+    border-radius: 15px;
+    margin-top: 5px;
+}
+
+.form-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.btng{
+    appearance: none;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    font-size: 18px;
+    box-shadow: 0px 0px 2px black;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    transition: 0.2s;
+}
+
+.btng2{
+    color: #f8b416;
+    border: 1px solid #f8b416;
+    background-image: linear-gradient(to top, #f8b416 50%, transparent 50%);
+    background-size: 100% 200%;
+    background-position: 0% 0%;
+}
+
+.btng2:hover{
+    color: #001b35;
+    background-position: 0% 100%;
+}
