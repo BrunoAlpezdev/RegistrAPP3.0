@@ -10,10 +10,10 @@ export class QrPage implements OnInit {
 
   constructor(private activatedRoute: ActivatedRoute) { }
 
-  nombre:string;
+  qrString = 'secreto shshshkakaka';
 
   ngOnInit() {
-    this.nombre = this.activatedRoute.snapshot.paramMap.get("name")
+    
   }
 
 }

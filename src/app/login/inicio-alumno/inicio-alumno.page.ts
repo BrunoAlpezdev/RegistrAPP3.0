@@ -14,7 +14,19 @@ import { Router } from '@angular/router';
 export class InicioAlumnoPage implements OnInit {
 
 
-  constructor(private alerta: AlertController, private fire: FirebaseService, private router: Router) { }
+  constructor(private alerta: AlertController, private fire: FirebaseService, private router: Router) { 
+    
+  }
+
+
+  handleRefresh(event) {
+    setTimeout(() => {
+      // Any calls to load data go here
+      event.target.complete();
+    }, 2000);
+    this.router.navigate(['/inicio-alumno']);
+  };
+
 
   ngOnInit() {
     this.validacion();

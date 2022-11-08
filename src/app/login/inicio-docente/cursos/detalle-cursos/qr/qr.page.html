@@ -8,9 +8,14 @@
 </ion-header>
 
 <ion-content>
-  <div class="qr">
-    <img src="./assets/qr.png" />
-  </div>
+  <ion-card class="ion-text-center">
+    <ion-card-content>
+      <qrcode 
+      [qrdata]="qrString"
+      [width]="340"
+      [errorCorrectionLevel]="'H'"></qrcode>
+    </ion-card-content>
+  </ion-card>
   <div class="conthr">
     <div class="hr"></div>
   </div>

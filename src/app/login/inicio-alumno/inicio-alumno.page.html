@@ -11,6 +11,9 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
  <ion-card *ngFor="let aux of todolist" class="ion-margin">
   <ion-card-header>
     <ion-item>
@@ -24,6 +27,7 @@
     </ion-label>
   </ion-card-content>
  </ion-card>
+ 
 </ion-content>
 
 <!--inicio footer-->
