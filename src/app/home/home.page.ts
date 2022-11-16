@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CarruselService } from '../services/carrusel.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home',
@@ -104,8 +105,17 @@ export class HomePage {
 
   carrusel = []
 
-  constructor(private servicio: CarruselService) {}
+  langs: string[] = [];
+
+  constructor(private servicio: CarruselService, private translateService: TranslateService) {
+    this.langs = this.translateService.getLangs();
+  }
   
+  changeLang(event) {
+    this.translateService.use(event.detail.value);
+    console.log(event.detail.value)
+  }
+
   ngOnInit() {
     this.carrusel = this.servicio.obtenerCarrusel()
   }

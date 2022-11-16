@@ -8,7 +8,7 @@
 </ion-header>
 
 <ion-content>
-  <ion-item *ngFor= "let aux of cursos" [routerLink]="['/cursos',aux.id]">
+  <ion-item *ngFor= "let aux of cursos" [routerLink]="['/cursos',aux.nombreclase]">
     <ion-label>{{ aux.nombreclase }}-{{ aux.seccion }}</ion-label>
   </ion-item>
 </ion-content>
