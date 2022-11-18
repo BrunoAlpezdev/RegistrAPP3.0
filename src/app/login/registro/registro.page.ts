@@ -26,6 +26,7 @@ export class RegistroPage implements OnInit {
 
   ngOnInit() {
     this.obtenerPalabras();
+    this.obtenerPalabrasPA();
   }
 
   correoPH : string;

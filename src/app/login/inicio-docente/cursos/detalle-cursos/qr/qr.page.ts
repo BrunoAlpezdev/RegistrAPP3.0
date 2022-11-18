@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-qr',
@@ -8,9 +9,18 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class QrPage implements OnInit {
 
-  constructor(private activatedRoute: ActivatedRoute) { }
+  constructor(private activatedRoute: ActivatedRoute, private translateService: TranslateService) { 
+    this.langs = this.translateService.getLangs();
+  }
 
   qrString = 'secreto shshshkakaka';
+
+  langs: string[] = [];
+
+  changeLang(event) {
+    this.translateService.use(event.detail.value);
+    console.log(event.detail.value)
+  }
 
   ngOnInit() {
     

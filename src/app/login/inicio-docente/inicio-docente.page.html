@@ -2,10 +2,10 @@
   <ion-toolbar>
     <ion-item lines="none">
       <ion-label style="font-weight:800 ;font-size: 3em;" >
-        HORARIO
+        {{ "Horario" | translate }}
         <p style="font-weight: 400;color : blue"></p>
         <p>
-          Bienvenido {{ usuariolog }} !!
+          {{ "bienvenido" | translate }} {{ usuariolog }} !!
         </p>
       </ion-label>
     </ion-item>
@@ -22,7 +22,7 @@
  
    <ion-card-content>
      <ion-label>
-       <ion-icon name="time-outline"></ion-icon> Hora de Clase: {{ aux.hora }}
+       <ion-icon name="time-outline"></ion-icon> {{ "Hora de Clase" | translate }}: {{ aux.hora }}
      </ion-label>
    </ion-card-content>
   </ion-card>

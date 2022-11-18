@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 import { Asistencias } from 'src/app/interfaces/asistencias';
 import { FirebaseService } from 'src/app/services/firebase.service';
 
@@ -12,7 +13,16 @@ export class DetalleCursosPage implements OnInit {
 
   asistencias : any;
 
-  constructor(private activateRoute: ActivatedRoute, private fire: FirebaseService) { }
+  constructor(private activateRoute: ActivatedRoute, private fire: FirebaseService, private translateService: TranslateService) { 
+    this.langs = this.translateService.getLangs();
+  }
+
+  langs: string[] = [];
+
+  changeLang(event) {
+    this.translateService.use(event.detail.value);
+    console.log(event.detail.value)
+  }
 
   ngOnInit() {
     ///this.activateRoute.paramMap.subscribe( paramMap => {

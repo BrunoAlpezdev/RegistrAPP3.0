@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Asistencia del curso</ion-title>
+    <ion-title>{{ "Asistencia del curso" | translate }}</ion-title>
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
@@ -8,7 +8,7 @@
 </ion-header>
 
 <ion-content>
-  <ion-list-header> ASISTENCIA </ion-list-header>
+  <ion-list-header> {{ "Asistencia" | translate }} </ion-list-header>
 <ion-list *ngFor= "let aux of asistencias">
   <ion-item>
     <ion-label>{{ aux.nombre }}</ion-label>

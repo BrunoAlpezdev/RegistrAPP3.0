@@ -29,5 +29,9 @@
     "alumno@duocuc.cl" : "student@duocuc.cl",
     "Cuenta Registrada en la base de datos" : "Account registrated in the database",
     "Creación de cuenta" : "Account creation",
-    "Se ha creado su cuenta" : "Your account has been created successfully"
+    "Se ha creado su cuenta" : "Your account has been created successfully",
+    "Cursos" : "courses",
+    "Asistencia del curso" : "course attendance",
+    "Asistencia" : "Attendance",
+    "Escanee este código con su aplicación móvil para registrar su asistencia." : "Scan this code with your mobile app to register your attendance."
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { AlertController } from '@ionic/angular';
+import { TranslateService } from '@ngx-translate/core';
 import { Clase } from 'src/app/interfaces/clase';
 import { FirebaseService } from 'src/app/services/firebase.service';
 
@@ -12,8 +13,17 @@ import { FirebaseService } from 'src/app/services/firebase.service';
 })
 export class InicioDocentePage implements OnInit {
 
-  constructor(private alerta: AlertController, private fire: FirebaseService) { }
+  constructor(private alerta: AlertController, private fire: FirebaseService, private translateService: TranslateService) {
+    this.langs = this.translateService.getLangs();
+  }
 
+  langs: string[] = [];
+
+  changeLang(event) {
+    this.translateService.use(event.detail.value);
+    console.log(event.detail.value)
+  }
+  
   ngOnInit() {
     this.obtenerClases();
     this.validacion();
