@@ -5,6 +5,7 @@ import { FirebaseService } from 'src/app/services/firebase.service';
 import { getAuth } from "firebase/auth";
 import { Tempuser } from 'src/app/interfaces/tempuser';
 import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-inicio-alumno',
@@ -14,11 +15,17 @@ import { Router } from '@angular/router';
 export class InicioAlumnoPage implements OnInit {
 
 
-  constructor(private alerta: AlertController, private fire: FirebaseService, private router: Router) { 
-    
+  constructor(private alerta: AlertController, private fire: FirebaseService, private router: Router, private translateService: TranslateService) { 
+    this.langs = this.translateService.getLangs();
   }
 
+  langs: string[] = [];
 
+  changeLang(event) {
+    this.translateService.use(event.detail.value);
+    console.log(event.detail.value)
+  }
+  
   handleRefresh(event) {
     setTimeout(() => {
       // Any calls to load data go here

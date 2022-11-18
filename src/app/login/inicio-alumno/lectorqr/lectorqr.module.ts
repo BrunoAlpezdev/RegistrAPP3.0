@@ -8,6 +8,7 @@ import { LectorqrPageRoutingModule } from './lectorqr-routing.module';
 
 import { LectorqrPage } from './lectorqr.page';
 import { QRCodeModule } from 'angularx-qrcode';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { QRCodeModule } from 'angularx-qrcode';
     FormsModule,
     IonicModule,
     LectorqrPageRoutingModule,
-    QRCodeModule
+    QRCodeModule,
+    TranslateModule
   ],
   declarations: [LectorqrPage]
 })

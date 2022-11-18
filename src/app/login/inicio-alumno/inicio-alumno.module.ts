@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { InicioAlumnoPageRoutingModule } from './inicio-alumno-routing.module';
 
 import { InicioAlumnoPage } from './inicio-alumno.page';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { InicioAlumnoPage } from './inicio-alumno.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    InicioAlumnoPageRoutingModule
+    InicioAlumnoPageRoutingModule,
+    TranslateModule
   ],
   declarations: [InicioAlumnoPage]
 })

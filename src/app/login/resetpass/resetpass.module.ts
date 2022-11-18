@@ -8,12 +8,15 @@ import { ResetpassPageRoutingModule } from './resetpass-routing.module';
 
 import { ResetpassPage } from './resetpass.page';
 
+import { TranslateModule } from '@ngx-translate/core';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ResetpassPageRoutingModule
+    ResetpassPageRoutingModule,
+    TranslateModule
   ],
   declarations: [ResetpassPage]
 })

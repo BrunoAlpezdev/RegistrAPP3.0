@@ -8,22 +8,22 @@
       <ion-card-content>
         Inicio de sesión
         <ion-item>
-          <ion-label position="floating">Usuario: </ion-label>
-          <ion-input placeholder="alumno@duocuc.cl" type="text" #txtUsuario></ion-input>
+          <ion-label position="floating">{{ "Usuario" | translate }}: </ion-label>
+          <ion-input placeholder="{{ correoPH }}" type="text" #txtUsuario></ion-input>
         </ion-item>
         <ion-item>
-          <ion-label position="floating">Contraseña: </ion-label>
-          <ion-input placeholder="contraseña" type="password" #txtPass></ion-input>
+          <ion-label position="floating">{{ "Contraseña" | translate }}: </ion-label>
+          <ion-input placeholder="{{ passPH }}" type="password" #txtPass></ion-input>
         </ion-item>
 
 
         
       </ion-card-content>
       <div class="form-group">
-        <button class="btng btng2" (click)="login(txtUsuario,txtPass)">Iniciar sesión</button>
+        <button class="btng btng2" (click)="login(txtUsuario,txtPass)">{{ "Iniciar Sesión" | translate }}</button>
       </div>
       <div class="form-group">
-        <button class="btng btng2" [routerLink]="['/login/registro']">Registrar</button>
+        <button class="btng btng2" [routerLink]="['/login/registro']">{{ "Registrar" | translate }}</button>
       </div>
       <div class="form-group" style="margin-top: 10px ;">
         <button class="btng btn-google" (click)="onGoogleLogin()">
@@ -46,7 +46,7 @@
       {{ mensaje }}
       <br>
       <!--Mantener sesión-->
-      <i-label class="olv" [routerLink]="['/login/resetpass']" >¿Olvidaste tu contraseña?</i-label>
+      <i-label class="olv" [routerLink]="['/login/resetpass']" >{{ "¿Olvidaste tu Contraseña?" | translate }}</i-label>
     </ion-card>
   </div>
 </ion-content>

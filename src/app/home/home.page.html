@@ -7,13 +7,12 @@
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_DuocUC.svg/2560px-Logo_DuocUC.svg.png" />
 
       <ion-card-content>
-        {{ "bienvenido" | translate }}
-        Registro de asistencia
+        {{ "Registro de asistencia" | translate }}
         <hr>
-        <button class="btng btng2" [routerLink]="['/login']">Iniciar Sesión</button>
+        <button class="btng btng2" [routerLink]="['/login']">{{ "Iniciar Sesión" | translate }}</button>
       </ion-card-content>
       <ion-item class="select">
-      <ion-label>{{ "selecciona" | translate }}</ion-label>
+      <ion-label>{{ "Idioma" | translate }}</ion-label>
       <ion-select cancelText="Cancel" [(ngModel)]="idioma" placeholder="Selecciona" (ionChange)="changeLang($event)">
         <ion-select-option *ngFor="let lang of langs">{{ lang }}</ion-select-option>
       </ion-select>

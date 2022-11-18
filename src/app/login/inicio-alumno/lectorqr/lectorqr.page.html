@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title> scanner</ion-title>
+    <ion-title>{{ "Escaneo" | translate }}</ion-title>
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
@@ -13,13 +13,13 @@
     expand="block"
     (click)="startScan()" 
     class="ion-margin">
-      Escanear
+      {{ "Escanear" | translate }}
     </ion-button>
   </ion-card>
   <hr>
   <ion-card>
     <ion-item *ngIf="resultadoEscaneo">
-      <ion-label class="ion-text-wrap">Resultado {{resultadoEscaneo}} </ion-label>
+      <ion-label class="ion-text-wrap">{{ "Resultado" | translate }} {{resultadoEscaneo}} </ion-label>
     </ion-item>
   </ion-card>
 </ion-content>

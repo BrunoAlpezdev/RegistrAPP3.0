@@ -6,9 +6,9 @@
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_DuocUC.svg/2560px-Logo_DuocUC.svg.png" />
 
       <ion-card-content>
-        Reestablecimiento de contraseña
+        {{ "Reestablecimiento de contraseña" | translate }}
         <ion-item class="lbl">
-          <ion-label position="stacked">Correo: </ion-label>
+          <ion-label position="stacked">{{ "Correo" | translate }}: </ion-label>
           <ion-input placeholder="alumno@duocuc.cl" type="text" #txtReset></ion-input>
         </ion-item>
 
@@ -16,7 +16,7 @@
         
       </ion-card-content>
 
-      <button class="btng btng2" (click)="olvidopass(txtReset)" >Reestablecer</button>
+      <button class="btng btng2" (click)="olvidopass(txtReset)" >{{ "Reestablecer" | translate }}</button>
       
       <br>
     </ion-card>

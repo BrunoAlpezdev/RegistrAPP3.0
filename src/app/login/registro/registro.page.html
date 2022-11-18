@@ -6,32 +6,32 @@
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_DuocUC.svg/2560px-Logo_DuocUC.svg.png" />
 
       <ion-card-content>
-        Registro
+        {{ "Registro" | translate }}
         <ion-item>
-          <ion-label position="stacked">Nombre: </ion-label>
-          <ion-input placeholder="Pedro Lopez" type="text" #txtNombre></ion-input>
+          <ion-label position="stacked">{{ "Nombre" | translate }}: </ion-label>
+          <ion-input placeholder="{{ nombrePH }}" type="text" #txtNombre></ion-input>
         </ion-item>
         <ion-item>
-          <ion-label position="stacked">Correo: </ion-label>
-          <ion-input placeholder="alumno@duocuc.cl" type="text" #txtUsuario></ion-input>
+          <ion-label position="stacked">{{ "Correo" | translate }}: </ion-label>
+          <ion-input placeholder="{{ correoPH }}" type="text" #txtUsuario></ion-input>
         </ion-item>
         <ion-item>
-          <ion-label position="stacked">Contraseña: </ion-label>
-          <ion-input placeholder="contraseña" type="password" #txtPass></ion-input>
+          <ion-label position="stacked">{{ "Contraseña" | translate }}: </ion-label>
+          <ion-input placeholder="{{ passPH }}" type="password" #txtPass></ion-input>
         </ion-item>
         <ion-list>
           <ion-radio-group [allowEmptySelection]="false" value="" #qDocente>
             <ion-item>
-              <ion-label>Docente</ion-label>
+              <ion-label>{{ "Docente" | translate }}</ion-label>
               <ion-radio slot="end" value=2></ion-radio>
             </ion-item>
             <ion-item>
-              <ion-label>Estudiante</ion-label>
+              <ion-label>{{ "Estudiante" | translate }}</ion-label>
               <ion-radio slot="end" value=1></ion-radio>
             </ion-item>
           </ion-radio-group>
         </ion-list>
-        <button class="btng btng2" (click)="registrar(txtNombre,txtUsuario,txtPass,qDocente)">Registrar</button>
+        <button class="btng btng2" (click)="registrar(txtNombre,txtUsuario,txtPass,qDocente)">{{ "Registrar" | translate }}</button>
 
       </ion-card-content>
 

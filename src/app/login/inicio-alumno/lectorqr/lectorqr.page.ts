@@ -1,5 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { BarcodeScanner } from '@capacitor-community/barcode-scanner';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-lectorqr',
@@ -12,10 +13,17 @@ export class LectorqrPage implements OnDestroy {
   resultadoEscaneo: any;
   visibilidad : string;
 
-  constructor() { }
+  constructor(private translateService: TranslateService) { 
+    this.langs = this.translateService.getLangs();
+  }
 
+  langs: string[] = [];
+
+  changeLang(event) {
+    this.translateService.use(event.detail.value);
+    console.log(event.detail.value)
+  }
   
-
   async checkPermission(){
     try {
       const status = await BarcodeScanner.checkPermission({ force: true });

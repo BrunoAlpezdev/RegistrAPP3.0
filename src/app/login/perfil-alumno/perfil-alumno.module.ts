@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { PerfilAlumnoPageRoutingModule } from './perfil-alumno-routing.module';
 
 import { PerfilAlumnoPage } from './perfil-alumno.page';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    PerfilAlumnoPageRoutingModule
+    PerfilAlumnoPageRoutingModule,
+    TranslateModule
   ],
   declarations: [PerfilAlumnoPage]
 })

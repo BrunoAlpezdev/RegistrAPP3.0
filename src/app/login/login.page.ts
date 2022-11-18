@@ -4,6 +4,7 @@ import { Tempuser } from '../interfaces/tempuser';
 import { FirebaseService } from '../services/firebase.service';
 import { AuthProvider, getAuth } from 'firebase/auth'; 
 import * as firebase from "firebase/auth"
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-login',
@@ -15,14 +16,46 @@ export class LoginPage implements OnInit {
   mensaje : string
   usuario: Tempuser
   private usuarios = []
-  constructor(private fire: FirebaseService, private router: Router) { }
+  constructor(private fire: FirebaseService, private router: Router, private translateService: TranslateService) {
+    this.langs = this.translateService.getLangs();
+  }
 
+
+  langs: string[] = [];
+
+  
+  changeLang(event) {
+    this.translateService.use(event.detail.value);
+    console.log(event.detail.value)
+  }
   ngOnInit() {
     this.obtenerUsuarios();
     this.verificarLogin();
+    this.obtenerPalabras();
   }
 
-  
+  correoPH : string;
+  passPH : string;
+  nombrePH : string;
+
+  async obtenerPalabras() {
+    this.translateService.get('alumno@duocuc.cl').subscribe(
+      (res: string) => {
+        this.correoPH = res
+      }
+    )
+    this.translateService.get('Nombre').subscribe(
+      (res: string) => {
+        this.nombrePH = res
+      }
+    )
+    this.translateService.get('Contraseña').subscribe(
+      (res: string) => {
+        this.passPH = res
+      }
+    )
+  }
+
   async verificarLogin(){
     const auth = getAuth();
     firebase.onAuthStateChanged(auth,function(user) {

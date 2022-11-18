@@ -4,7 +4,7 @@ import { AlertController } from '@ionic/angular';
 import { getAuth } from 'firebase/auth';
 import { User } from 'src/app/interfaces/user';
 import { FirebaseService } from 'src/app/services/firebase.service';
-
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-perfil-alumno',
@@ -17,14 +17,58 @@ export class PerfilAlumnoPage implements OnInit {
   correo: string;
   foto: string;
   perfill: any;
-  constructor(private router: Router, private alerta: AlertController, private fire: FirebaseService) { }
+  constructor(private router: Router, private alerta: AlertController, private fire: FirebaseService, private translateService: TranslateService) { 
+    this.langs = this.translateService.getLangs();
+  }
 
+  langs: string[] = [];
+
+  changeLang(event) {
+    this.translateService.use(event.detail.value);
+    console.log(event.detail.value)
+  }
+
+  
   ngOnInit() {
     this.obtenerUsuarioAct();
+    this.obtenerPalabras();
   }
   
   ionViewWillEnter() {
     this.obtenerUsuarioAct();
+    this.obtenerPalabras();
+  }
+
+  canVar : string;
+  siVar : string;
+  cerVar : string;
+  msgVar : string;
+
+  async obtenerPalabras() {
+    this.translateService.get('Cancelar').subscribe(
+      (res: string) => {
+        console.log('nombre ->',res)
+        this.canVar = res
+      }
+    )
+    this.translateService.get('Si').subscribe(
+      (res: string) => {
+        console.log('si ->',res)
+        this.siVar = res
+      }
+    )
+    this.translateService.get('Cerrar Sesión').subscribe(
+      (res: string) => {
+        console.log('si ->',res)
+        this.cerVar = res
+      }
+    )
+    this.translateService.get('Está seguro/a de cerrar sesión?').subscribe(
+      (res: string) => {
+        console.log('si ->',res)
+        this.msgVar = res
+      }
+    )
   }
 
   async obtenerUsuarioAct(){
@@ -51,15 +95,15 @@ export class PerfilAlumnoPage implements OnInit {
 
   async mensajeLogout() {
     const alert = await this.alerta.create({
-      header: 'Cerrar Sesión',
-      message: 'Esta Seguro de cerrar sesión?',
+      header: this.cerVar,
+      message: this.msgVar,
       buttons: [
         {
-          text: 'Cancelar',
+          text: this.canVar,
           role: 'cancel',
         },
         {
-          text: 'Sí',
+          text: this.siVar,
           handler: () => {
             this.router.navigate(['/home']);
             this.fire.logout();

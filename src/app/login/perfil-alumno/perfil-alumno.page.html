@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Perfil</ion-title>
+    <ion-title>{{ "Perfil" | translate }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -11,7 +11,7 @@
       {{ correo }}</ion-label>
     <hr>
     <div class="form-group">
-      <button class="btng btn-google" (click)="mensajeLogout()">Cerrar Sesión</button>
+      <button class="btng btn-google" (click)="mensajeLogout()">{{ "Cerrar Sesión" | translate }}</button>
       <button class="btng btng2" [routerLink]="['/strapip']" style="margin-top: 5px;"><ion-icon name="apps-outline"></ion-icon>API</button> 
     </div>
   </div>
