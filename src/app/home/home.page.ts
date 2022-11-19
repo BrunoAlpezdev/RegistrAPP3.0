@@ -10,6 +10,7 @@ import { TranslateService } from '@ngx-translate/core';
 
 export class HomePage {
 
+  Idioma = []
 
   public slideOpts = {
     slidesPerView: 1.3,

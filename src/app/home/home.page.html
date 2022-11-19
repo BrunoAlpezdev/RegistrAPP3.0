@@ -13,7 +13,7 @@
       </ion-card-content>
       <ion-item class="select">
       <ion-label>{{ "Idioma" | translate }}</ion-label>
-      <ion-select cancelText="Cancel" [(ngModel)]="idioma" placeholder="Selecciona" (ionChange)="changeLang($event)">
+      <ion-select cancelText="Cancel" [(ngModel)]="Idioma" placeholder="Selecciona" (ionChange)="changeLang($event)">
         <ion-select-option *ngFor="let lang of langs">{{ lang }}</ion-select-option>
       </ion-select>
     </ion-item>
