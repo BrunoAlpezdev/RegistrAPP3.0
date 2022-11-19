@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="text-align: center;">{{ "Verificador de Ubicación" | translate }}</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card-content style="justify-content: center; text-align:center ;">
+    <h2>{{ mensajeCoordenadas }}</h2>
+    
+    <div style="visibility: {{ visibilidad }}; margin-top: 5px;">
+      <button [routerLink]="['/lectorqr']" class="btng btng2">{{ "Ir a leer qr" | translate }}</button>
+    </div>
+
+    <div style="visibility: {{ visibilidad2 }};">
+      <button [routerLink]="['/inicio-alumno']" class="btng btng1">{{ "Volver al Inicio" | translate }}</button>
+    </div>
+    
+    
+  </ion-card-content>
+
+  
+  <ion-card-content>
+
+    <div class="mapa" #divMap></div>
+
+  </ion-card-content>
+  
+  
+</ion-content>

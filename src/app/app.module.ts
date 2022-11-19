@@ -16,19 +16,22 @@ import { QRCodeModule } from 'angularx-qrcode'
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader, TranslateService } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { MapaComponent } from './login/inicio-alumno/mapa/mapa.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 export function HttpLoaderFactory(httpCliente: HttpClient) {
   return new TranslateHttpLoader(httpCliente, "../assets/i18n/",".json");
 }
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent,MapaComponent],
   imports: [BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
     AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     QRCodeModule,
+    ReactiveFormsModule,
     HttpClientModule, TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

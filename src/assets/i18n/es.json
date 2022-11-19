@@ -33,5 +33,10 @@
     "Cursos" : "Cursos",
     "Asistencia del curso" : "Asistencia del curso",
     "Asistencia" : "Asistencia",
-    "Escanee este código con su aplicación móvil para registrar su asistencia." : "Escanee este código con su aplicación móvil para registrar su asistencia."
+    "Escanee este código con su aplicación móvil para registrar su asistencia." : "Escanee este código con su aplicación móvil para registrar su asistencia.",
+    "Te encuentras dentro del rango de tu sede." : "Te encuentras dentro del rango de tu sede.",
+    "No se encuentra en su sede de DuocUC" : "No se encuentra en su sede de DuocUC",
+    "Ir a leer qr" : "Ir a leer qr",
+    "Volver al Inicio" : "Volver al Inicio",
+    "Verificador de Ubicación" : "Verificador de Ubicación"
 }

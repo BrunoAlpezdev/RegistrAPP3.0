@@ -31,6 +31,7 @@
     "@ionic/angular": "^6.1.9",
     "@ngx-translate/core": "^14.0.0",
     "@ngx-translate/http-loader": "^7.0.0",
+    "@types/googlemaps": "^3.43.3",
     "angularx-qrcode": "^14.0.0",
     "firebase": "^9.10.0",
     "ionicons": "^6.0.3",

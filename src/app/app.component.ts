@@ -11,4 +11,5 @@ export class AppComponent {
     this.translateService.setDefaultLang('es');
 	this.translateService.addLangs(['es','fr','ᒲ╎リᒷ ᓵ∷ᒷᔑℸ ̣ ᒷ','en','한국어']);
   }
+  title = 'RegistrAPP3.0';
 }

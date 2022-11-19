@@ -34,5 +34,10 @@
     "Cursos" : "과정",
     "Asistencia del curso" : "코스 출석",
     "Asistencia" : "출석",
-    "Escanee este código con su aplicación móvil para registrar su asistencia." : "출석을 등록하려면 모바일 앱으로 이 코드를 스캔하세요."
+    "Escanee este código con su aplicación móvil para registrar su asistencia." : "출석을 등록하려면 모바일 앱으로 이 코드를 스캔하세요.",
+    "Te encuentras dentro del rango de tu sede." : "당신은 당신의 대학의 도달 범위 내에 있습니다.",
+    "No se encuentra en su sede de DuocUC" : "Duoc UC 본사에 있지 않습니다.",
+    "Ir a leer qr" : "QR 읽기로 이동",
+    "Volver al Inicio" : "집으로 돌아가다",
+    "Verificador de Ubicación" : "유비케이션 검증기"
 }

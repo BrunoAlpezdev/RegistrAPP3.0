@@ -12,7 +12,7 @@
     "Bienvenido/a" : "Welcome",
     "Hora de Clase" : "Class time",
     "Perfil" : "Profile",
-    "Cerrar Sesión" : "Sign off",
+    "Cerrar Sesión" : "Sign out",
     "Escaneo" : "Scanning",
     "Escanear" : "Scan",
     "Está seguro/a de cerrar sesión?" : "Are you sure to log out?",
@@ -33,5 +33,10 @@
     "Cursos" : "courses",
     "Asistencia del curso" : "course attendance",
     "Asistencia" : "Attendance",
-    "Escanee este código con su aplicación móvil para registrar su asistencia." : "Scan this code with your mobile app to register your attendance."
+    "Escanee este código con su aplicación móvil para registrar su asistencia." : "Scan this code with your mobile app to register your attendance.",
+    "Te encuentras dentro del rango de tu sede." : "You are into DuocUC attendance range",
+    "No se encuentra en su sede de DuocUC" : "You are not located at Duoc UC range",
+    "Ir a leer qr" : "Go to QR Reading",
+    "Volver al Inicio" : "Go back home",
+    "Verificador de Ubicación" : "Location checker"
 }

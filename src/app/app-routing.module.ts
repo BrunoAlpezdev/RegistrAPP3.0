@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { MapaComponent } from './login/inicio-alumno/mapa/mapa.component';
 
 const routes: Routes = [
   {
@@ -64,6 +65,9 @@ const routes: Routes = [
   {
     path: 'strapip',
     loadChildren: () => import('./strapip/strapip.module').then( m => m.StrapipPageModule)
+  },
+  {
+    path: 'mapa', component : MapaComponent
   }
   
 ];

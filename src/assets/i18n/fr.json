@@ -33,5 +33,10 @@
     "Cursos" : "Cours",
     "Asistencia del curso" : "Présences aux cours",
     "Asistencia" : "Présence",
-    "Escanee este código con su aplicación móvil para registrar su asistencia." : "Scannez ce code avec votre application mobile pour enregistrer votre présence."
+    "Escanee este código con su aplicación móvil para registrar su asistencia." : "Scannez ce code avec votre application mobile pour enregistrer votre présence.",
+    "Te encuentras dentro del rango de tu sede." : "Vous êtes dans la gamme de fréquentation Duoc UC",
+    "No se encuentra en su sede de DuocUC" : "Vous n'êtes pas situé à la gamme Duoc UC",
+    "Ir a leer qr" : "allez lire qr",
+    "Volver al Inicio" : "Retour au début",
+    "Verificador de Ubicación" : "Vérificateur d'ubication"
 }

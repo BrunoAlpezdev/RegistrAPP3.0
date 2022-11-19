@@ -17,13 +17,13 @@
  <ion-card *ngFor="let aux of todolist" class="ion-margin">
   <ion-card-header>
     <ion-item>
-      <ion-icon name="book-outline"></ion-icon> <ion-label>{{ aux.nombreclase }}-{{ aux.seccion }}</ion-label>
+      <ion-icon name="book-outline"> </ion-icon> <ion-label> {{ aux.nombreclase }}-{{ aux.seccion }}</ion-label>
     </ion-item>
   </ion-card-header>
 
   <ion-card-content>
     <ion-label>
-      <ion-icon name="time-outline"></ion-icon>{{ "Hora de Clase" | translate }}: {{ aux.hora }}
+      <ion-icon name="time-outline"></ion-icon> {{ "Hora de Clase" | translate }}: {{ aux.hora }}
     </ion-label>
   </ion-card-content>
  </ion-card>
@@ -38,7 +38,7 @@
   
       <button class="btng btng2" [routerLink]="['/perfil-alumno']"><ion-icon name="person-outline"></ion-icon></button>
       
-      <button class="btng btng2" [routerLink]="['/lectorqr']"><ion-icon name="scan-outline"></ion-icon></button>
+      <button class="btng btng2" [routerLink]="['/mapa']"><ion-icon name="scan-outline"></ion-icon></button>
     </div>
   </ion-toolbar>
 </ion-footer>
