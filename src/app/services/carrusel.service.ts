@@ -21,7 +21,7 @@ export class CarruselService {
     },
     {
       id : '3',
-      img : './assets/imgs/BelénAlmonacid_4-scaled.jpg',
+      img : './assets/imgs/BelénAlmonacid_4.jpg',
       desc: 'Duocana se prepara a vivir desafiante competencia en Alemania'
     },
     {

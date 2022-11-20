@@ -5,7 +5,6 @@ import { FormControl, FormGroup } from '@angular/forms'
 import { ElementRef, ViewChild, Renderer2 } from '@angular/core'
 import { TranslateService } from '@ngx-translate/core';
 
-
 @Component({
   selector: 'app-mapa',
   templateUrl: './mapa.component.html',
@@ -20,32 +19,30 @@ export class MapaComponent implements OnInit {
   markers: google.maps.Marker[];
   distancia!: string;
   formMapas!: FormGroup;
-
-
   longitudvar : any;
   latitudvar : any;
-
   longitudpos : any;
   latitudpos : any;
-
   latitudDuocMin: any = 33.5979;
   longitudDuocMin : any = 70.5769;
-
   latitudDuocMax: any = 33.5996;
   longitudDuocMax : any = 70.5819;
-
   mensajeCoordenadas : any;
-
   visibilidad : string;
-  
   visibilidad2 : string = 'hidden';
+  langs: string[] = [];
+  msgPA : string;
+  suxPA : string;
 
-  constructor(private renderer: Renderer2, private translateService: TranslateService) {
+  
+
+  constructor(private renderer: Renderer2, private translateService: TranslateService) 
+  {
     this.langs = this.translateService.getLangs();
     this.markers = [];
   }
 
-  langs: string[] = [];
+
 
   changeLang(event) {
     this.translateService.use(event.detail.value);
@@ -55,9 +52,6 @@ export class MapaComponent implements OnInit {
   ngOnInit(): void {
     this.obtenerPalabrasPA();
   }
- 
-  msgPA : string
-  suxPA : string
 
   async obtenerPalabrasPA() {
     this.translateService.get('Te encuentras dentro del rango de tu sede.').subscribe(
@@ -113,8 +107,6 @@ export class MapaComponent implements OnInit {
 
   };
 
-
-
   cargarMapa(position: any): any {
 
     const opciones = {
@@ -133,6 +125,7 @@ export class MapaComponent implements OnInit {
     markerPosition.setMap(this.mapa);
     this.markers.push(markerPosition);
   };
+
 
 
 }
