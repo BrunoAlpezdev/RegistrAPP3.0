@@ -11,10 +11,8 @@
   <ion-list-header> {{ "Asistencia" | translate }} </ion-list-header>
   <ion-list *ngFor= "let aux of asistencias">
     <ion-item>
-      <ion-label>{{ aux.id }}</ion-label>
       <ion-label>{{ aux.nombre }}</ion-label>
-      <ion-note slot="end" color="danger">{{ aux.nuas }}</ion-note>
-      <ion-note slot="end" color="danger">{{ aux.porcentaje }}</ion-note>
+      <ion-note slot="end" color="danger">Asistencia a clases: {{ aux.nuas }}</ion-note>
     </ion-item>
   </ion-list>
 </ion-content>
