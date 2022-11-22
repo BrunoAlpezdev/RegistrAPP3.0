@@ -47,25 +47,25 @@ export class PerfilAlumnoPage implements OnInit {
   async obtenerPalabras() {
     this.translateService.get('Cancelar').subscribe(
       (res: string) => {
-        console.log('nombre ->',res)
+
         this.canVar = res
       }
     )
     this.translateService.get('Si').subscribe(
       (res: string) => {
-        console.log('si ->',res)
+
         this.siVar = res
       }
     )
     this.translateService.get('Cerrar Sesión').subscribe(
       (res: string) => {
-        console.log('si ->',res)
+
         this.cerVar = res
       }
     )
     this.translateService.get('Está seguro/a de cerrar sesión?').subscribe(
       (res: string) => {
-        console.log('si ->',res)
+
         this.msgVar = res
       }
     )

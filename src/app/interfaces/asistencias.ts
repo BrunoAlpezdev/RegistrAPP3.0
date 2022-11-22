@@ -1,4 +1,6 @@
 export interface Asistencias {
+    id : string,
     nombre: string,
-    porcentaje: string,
+    nuas: number,
+    porcentaje: number,
 }

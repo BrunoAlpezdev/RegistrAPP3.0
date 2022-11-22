@@ -1,0 +1,65 @@
+
+-------------------------java------------------>
+
+package io.ionic.starter;
+
+import android.Manifest;
+import android.content.pm.PackageManager;
+import android.os.Build;
+import android.os.Bundle;
+import android.widget.Toast;
+
+import androidx.annotation.RequiresApi;
+import androidx.core.content.ContextCompat;
+
+import com.getcapacitor.BridgeActivity;
+
+public class MainActivity extends BridgeActivity {
+
+  int REQUEST_CODE = 200;
+
+  @RequiresApi(api = Build.VERSION_CODES.M)
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_main);
+
+    verificarPermisos();
+
+  }
+
+
+  @RequiresApi(api = Build.VERSION_CODES.M)
+  private void verificarPermisos() {
+    int PermisosGpsEX = ContextCompat.checkSelfPermission( this , Manifest.permission.ACCESS_FINE_LOCATION);
+    int PermisosGps = ContextCompat.checkSelfPermission( this , Manifest.permission.ACCESS_COARSE_LOCATION);
+
+    if (PermisosGpsEX == PackageManager.PERMISSION_GRANTED && PermisosGps == PackageManager.PERMISSION_GRANTED) {
+      //metodo mensaje
+      Toast.makeText(this, "Permiso GPS Concedido", Toast.LENGTH_SHORT).show();
+    } else {
+      requestPermissions(new String[]{Manifest.permission.ACCESS_FINE_LOCATION,Manifest.permission.ACCESS_COARSE_LOCATION},REQUEST_CODE);
+    }
+
+  }
+
+}
+
+
+<-------------------manifest------------------->
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-feature android:name="android.hardware.location.gps" />
+
+
+------------------------------------------------
+npm i @capacitor/core
+npm install @angular/cli
+npm i @capacitor/android
+npm i @capacitor/cli 
+ng build O npm build
+npx cap add android O ionic capacitor add android
+ionic build --prod
+-npx cap copy android
+-npx cap open android

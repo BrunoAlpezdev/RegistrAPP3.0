@@ -135,8 +135,8 @@ export class LoginPage implements OnInit {
       (err) => {
         console.log(err)
       }
-      )
-    }
+    )
+  }
     
   private obtenerCustomUsuario(usuario: string, pass: string) {
     return {

@@ -32,7 +32,13 @@ export class CursosPage implements OnInit {
     this.fire.getCollection<Clase>('Clase').subscribe(
       (res) => {
         console.log(res)
-        this.cursos=(res)
+        this.cursos= []
+
+        res.forEach( ( x )  => {
+
+          this.cursos.push( x )
+        })
+
       },
       (err) => {
         console.log(err)

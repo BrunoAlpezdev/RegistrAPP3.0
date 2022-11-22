@@ -12,8 +12,8 @@ export class QrPage implements OnInit {
   constructor(private activatedRoute: ActivatedRoute, private translateService: TranslateService) { 
     this.langs = this.translateService.getLangs();
   }
-
-  qrString = 'secreto shshshkakaka';
+  PGY2020 : any;
+  qrString = 'PGY2020';
 
   langs: string[] = [];
 

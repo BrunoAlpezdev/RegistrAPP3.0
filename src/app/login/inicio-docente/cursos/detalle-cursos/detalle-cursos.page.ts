@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
+import { getAuth } from 'firebase/auth';
 import { Asistencias } from 'src/app/interfaces/asistencias';
 import { FirebaseService } from 'src/app/services/firebase.service';
 
@@ -11,13 +12,13 @@ import { FirebaseService } from 'src/app/services/firebase.service';
 })
 export class DetalleCursosPage implements OnInit {
 
+  langs: string[] = [];
+  clase : any;
   asistencias : any;
-
+  asispath : string;
   constructor(private activateRoute: ActivatedRoute, private fire: FirebaseService, private translateService: TranslateService) { 
     this.langs = this.translateService.getLangs();
   }
-
-  langs: string[] = [];
 
   changeLang(event) {
     this.translateService.use(event.detail.value);
@@ -25,23 +26,35 @@ export class DetalleCursosPage implements OnInit {
   }
 
   ngOnInit() {
-    ///this.activateRoute.paramMap.subscribe( paramMap => {
-    ///  this.curso = this.servicio.obtenercurso(paramMap.get('id'))
-    ///  console.log(paramMap.get('id'))
-    ///})
-    this.asistencias = this.obtenerAsistencias();
+    this.activateRoute.paramMap.subscribe( paramMap => {
+      this.clase = paramMap.get('id')
+      console.log(paramMap.get('id'))
+    })
+
+    this.obtenerAsis();
   }
 
-  obtenerAsistencias() {
-    this.fire.getCollection<Asistencias>('asistencias').subscribe(
+  
+
+  async obtenerAsis() {
+    this.asispath = 'Clase/' + this.clase + '/Asistencias'
+    console.log(this.asispath)
+    this.fire.getCollection<Asistencias>(this.asispath).subscribe(
       (res) => {
         console.log(res)
-        this.asistencias=(res)
+        this.asistencias = []
+        res.forEach( ( x ) => {
+
+          this.asistencias.push( x );
+      } );
       },
       (err) => {
         console.log(err)
       }
     )
   }
+
+
+
 
 }

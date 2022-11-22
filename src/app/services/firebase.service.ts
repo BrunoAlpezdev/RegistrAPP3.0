@@ -9,6 +9,7 @@ import { Usuario } from '../login/usuario';
 import { switchMap } from "rxjs/operators";
 import { AuthProvider, getAuth } from 'firebase/auth'; 
 import * as firebase from "firebase/auth"
+import { Asistencias } from '../interfaces/asistencias';
 
 @Injectable({
   providedIn: 'root'
@@ -157,7 +158,6 @@ export class FirebaseService {
 
     return userRef.update(data);
   }
-
 
   
 
